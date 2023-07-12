@@ -58,7 +58,6 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.SearchContext = window.mR.findModule('getSearchContext')[0].getSearchContext;
     window.Store.DrawerManager = window.mR.findModule('DrawerManager')[0].DrawerManager;
     window.Store.Settings = window.mR.findModule('ChatlistPanelState')[0];
-    window.Store.MediaBlobCache = window.mR.findModule('MediaBlobCache')[0].MediaBlobCache;
      window.Store.MediaBlobCache = window.mR.findModule('MediaBlobCache')[0] ? window.mR.findModule('MediaBlobCache')[0].MediaBlobCache : window.mR.findModule('InMemoryMediaBlobCache')[0].InMemoryMediaBlobCache;
    
     window.Store.StickerTools = {
