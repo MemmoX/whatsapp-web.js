@@ -59,6 +59,8 @@ exports.ExposeStore = (moduleRaidStr) => {
     window.Store.DrawerManager = window.mR.findModule('DrawerManager')[0].DrawerManager;
     window.Store.Settings = window.mR.findModule('ChatlistPanelState')[0];
     window.Store.MediaBlobCache = window.mR.findModule('MediaBlobCache')[0].MediaBlobCache;
+     window.Store.MediaBlobCache = window.mR.findModule('MediaBlobCache')[0] ? window.mR.findModule('MediaBlobCache')[0].MediaBlobCache : window.mR.findModule('InMemoryMediaBlobCache')[0].InMemoryMediaBlobCache;
+   
     window.Store.StickerTools = {
         ...window.mR.findModule('toWebpSticker')[0],
         ...window.mR.findModule('addWebpMetadata')[0]
